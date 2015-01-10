@@ -1,0 +1,6 @@
+# Source files
+*.c text
+*.cpp text
+*.h text
+*.hpp text
+*.inl text

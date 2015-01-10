@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\runtime">
+      <UniqueIdentifier>{cb60996a-ccdf-4893-8f34-03ff82540176}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\runtime\atn">
+      <UniqueIdentifier>{cc1b482e-1d96-4138-81cc-e051b633066a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\runtime">
+      <UniqueIdentifier>{257680ed-4e7d-4fc8-a6e7-6b1ef5ef5dd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\runtime\atn">
+      <UniqueIdentifier>{548402ff-58c4-47ea-8ba1-2e58de634c7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\runtime\misc">
+      <UniqueIdentifier>{e247666a-2bc2-49c2-9ed0-e2ed2e28f041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{8c7b2f71-48ad-4993-a92a-d48d315d2df1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{53bb9ecd-7354-4df9-bf89-6d25266a79af}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\prediction_context.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\misc\murmur_hash.hpp">
+      <Filter>Header Files\runtime\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\prediction_context_cache.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\test\test_graph_nodes.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr4cpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\prediction_context.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\prediction_context_cache.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\test\test_graph_nodes.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="antlr\v4\runtime\atn\prediction_context_cache.inl">
+      <Filter>Header Files\runtime\atn</Filter>
+    </None>
+  </ItemGroup>
+</Project>
