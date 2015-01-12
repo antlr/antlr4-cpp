@@ -91,6 +91,11 @@
     <ClInclude Include="antlr\v4\runtime\misc\ptr_hash.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\unordered_ptr_map.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\unordered_ptr_set.hpp" />
+    <ClInclude Include="antlr\v4\runtime\misc\visitor.hpp" />
+    <ClInclude Include="antlr\v4\runtime\tree\parse_tree.hpp" />
+    <ClInclude Include="antlr\v4\runtime\tree\parse_tree_listener.hpp" />
+    <ClInclude Include="antlr\v4\runtime\tree\parse_tree_visitor.hpp" />
+    <ClInclude Include="antlr\v4\runtime\tree\parse_tree_walker.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -100,6 +105,8 @@
     <ClCompile Include="antlr\v4\runtime\atn\lexer_action.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\prediction_context.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\prediction_context_cache.cpp" />
+    <ClCompile Include="antlr\v4\runtime\tree\parse_tree.cpp" />
+    <ClCompile Include="antlr\v4\runtime\tree\parse_tree_walker.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -107,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="antlr\v4\runtime\atn\prediction_context_cache.inl" />
+    <None Include="antlr\v4\runtime\tree\parse_tree_visitor.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

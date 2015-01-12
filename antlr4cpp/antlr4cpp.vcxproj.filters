@@ -34,6 +34,12 @@
     <Filter Include="Header Files\test">
       <UniqueIdentifier>{53bb9ecd-7354-4df9-bf89-6d25266a79af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\runtime\tree">
+      <UniqueIdentifier>{770a12b8-3caf-4da2-9522-b5f828fc4877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\runtime\tree">
+      <UniqueIdentifier>{b1cbcc9a-55fc-4bff-927f-44fbbbb70b94}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -72,8 +78,23 @@
     <ClInclude Include="antlr\v4\runtime\atn\lexer_action.hpp">
       <Filter>Header Files\runtime\atn</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\tree\parse_tree.hpp">
+      <Filter>Header Files\runtime\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\tree\parse_tree_visitor.hpp">
+      <Filter>Header Files\runtime\tree</Filter>
+    </ClInclude>
     <ClInclude Include="antlr\v4\runtime\misc\param_type.hpp">
       <Filter>Header Files\runtime\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\misc\visitor.hpp">
+      <Filter>Header Files\runtime\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\tree\parse_tree_listener.hpp">
+      <Filter>Header Files\runtime\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\tree\parse_tree_walker.hpp">
+      <Filter>Header Files\runtime\tree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -95,10 +116,19 @@
     <ClCompile Include="antlr\v4\runtime\atn\lexer_action.cpp">
       <Filter>Source Files\runtime\atn</Filter>
     </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\tree\parse_tree.cpp">
+      <Filter>Source Files\runtime\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\tree\parse_tree_walker.cpp">
+      <Filter>Source Files\runtime\tree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="antlr\v4\runtime\atn\prediction_context_cache.inl">
       <Filter>Header Files\runtime\atn</Filter>
+    </None>
+    <None Include="antlr\v4\runtime\tree\parse_tree_visitor.inl">
+      <Filter>Header Files\runtime\tree</Filter>
     </None>
   </ItemGroup>
 </Project>
