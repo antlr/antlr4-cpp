@@ -63,6 +63,9 @@
     <ClInclude Include="antlr\test\test_graph_nodes.hpp">
       <Filter>Header Files\test</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\atn_state.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
     <ClInclude Include="antlr\v4\runtime\atn\semantic_context.hpp">
       <Filter>Header Files\runtime\atn</Filter>
     </ClInclude>
@@ -102,6 +105,9 @@
     <ClInclude Include="antlr\v4\runtime\tree\parse_tree_walker.hpp">
       <Filter>Header Files\runtime\tree</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\transition.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -133,6 +139,12 @@
     </ClCompile>
     <ClCompile Include="antlr\v4\runtime\tree\parse_tree_walker.cpp">
       <Filter>Source Files\runtime\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\atn_state.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\transition.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

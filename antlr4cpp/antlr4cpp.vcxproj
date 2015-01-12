@@ -82,11 +82,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="antlr\test\test_graph_nodes.hpp" />
+    <ClInclude Include="antlr\v4\runtime\atn\atn_state.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\lexer_action.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\lexer_action_executor.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\prediction_context.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\prediction_context_cache.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\semantic_context.hpp" />
+    <ClInclude Include="antlr\v4\runtime\atn\transition.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\murmur_hash.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\param_type.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\ptr_equal_to.hpp" />
@@ -104,11 +106,13 @@
   <ItemGroup>
     <ClCompile Include="antlr4cpp.cpp" />
     <ClCompile Include="antlr\test\test_graph_nodes.cpp" />
+    <ClCompile Include="antlr\v4\runtime\atn\atn_state.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\lexer_action.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\lexer_action_executor.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\prediction_context.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\prediction_context_cache.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\semantic_context.cpp" />
+    <ClCompile Include="antlr\v4\runtime\atn\transition.cpp" />
     <ClCompile Include="antlr\v4\runtime\tree\parse_tree.cpp" />
     <ClCompile Include="antlr\v4\runtime\tree\parse_tree_walker.cpp" />
     <ClCompile Include="stdafx.cpp">
