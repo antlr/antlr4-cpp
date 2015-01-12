@@ -63,6 +63,9 @@
     <ClInclude Include="antlr\test\test_graph_nodes.hpp">
       <Filter>Header Files\test</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\semantic_context.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
     <ClInclude Include="antlr\v4\runtime\misc\ptr_hash.hpp">
       <Filter>Header Files\runtime\misc</Filter>
     </ClInclude>
@@ -115,6 +118,9 @@
     </ClCompile>
     <ClCompile Include="antlr\test\test_graph_nodes.cpp">
       <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\semantic_context.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
     </ClCompile>
     <ClCompile Include="antlr\v4\runtime\atn\lexer_action.cpp">
       <Filter>Source Files\runtime\atn</Filter>
