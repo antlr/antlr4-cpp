@@ -9,6 +9,11 @@
 #include <antlr/v4/runtime/atn/prediction_context_cache.hpp>
 #include <antlr/v4/runtime/misc/murmur_hash.hpp>
 
+#if defined(_MSC_VER) && (_MSC_VER == 1800)
+#undef assert
+#define assert(_Expression) (void)( (!!(_Expression)) || (_wassert(_CRT_WIDE(#_Expression), _CRT_WIDE(__FILE__), (unsigned)(__LINE__)), 0) )
+#endif
+
 namespace antlr4 {
 namespace runtime {
 namespace atn {

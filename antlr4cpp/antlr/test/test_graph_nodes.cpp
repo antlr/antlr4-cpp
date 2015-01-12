@@ -10,6 +10,11 @@
 #include <antlr/v4/runtime/atn/prediction_context.hpp>
 #include <antlr/v4/runtime/atn/prediction_context_cache.hpp>
 
+#if defined(_MSC_VER) && (_MSC_VER == 1800)
+#undef assert
+#define assert(_Expression) (void)( (!!(_Expression)) || (_wassert(_CRT_WIDE(#_Expression), _CRT_WIDE(__FILE__), (unsigned)(__LINE__)), 0) )
+#endif
+
 namespace antlr {
 namespace test {
 
@@ -44,7 +49,7 @@ namespace test {
 			std::wstring expecting =
 				L"digraph G {\n"
 				L"rankdir=LR;\n"
-				"  s0[label=\"*\"];\n"
+				L"  s0[label=\"*\"];\n"
 				L"}\n";
 
 			std::wcout << actual << std::endl;
