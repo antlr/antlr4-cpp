@@ -87,6 +87,10 @@
     <ClInclude Include="antlr\v4\runtime\atn\prediction_context.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\prediction_context_cache.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\murmur_hash.hpp" />
+    <ClInclude Include="antlr\v4\runtime\misc\ptr_equal_to.hpp" />
+    <ClInclude Include="antlr\v4\runtime\misc\ptr_hash.hpp" />
+    <ClInclude Include="antlr\v4\runtime\misc\unordered_ptr_map.hpp" />
+    <ClInclude Include="antlr\v4\runtime\misc\unordered_ptr_set.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
