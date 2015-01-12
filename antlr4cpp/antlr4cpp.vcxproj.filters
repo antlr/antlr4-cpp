@@ -72,6 +72,9 @@
     <ClInclude Include="antlr\v4\runtime\atn\lexer_action.hpp">
       <Filter>Header Files\runtime\atn</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\misc\param_type.hpp">
+      <Filter>Header Files\runtime\misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
