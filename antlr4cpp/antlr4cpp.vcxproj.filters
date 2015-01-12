@@ -69,6 +69,9 @@
     <ClInclude Include="antlr\v4\runtime\misc\unordered_ptr_set.hpp">
       <Filter>Header Files\runtime\misc</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\lexer_action.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -85,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="antlr\test\test_graph_nodes.cpp">
       <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\lexer_action.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
