@@ -108,6 +108,9 @@
     <ClInclude Include="antlr\v4\runtime\atn\transition.hpp">
       <Filter>Header Files\runtime\atn</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\atn_deserialization_options.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
     <ClInclude Include="antlr\v4\runtime\atn\atn_type.hpp">
       <Filter>Header Files\runtime\atn</Filter>
     </ClInclude>
