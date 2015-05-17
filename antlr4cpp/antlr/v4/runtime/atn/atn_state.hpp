@@ -11,7 +11,7 @@ namespace atn {
 
 	class transition;
 
-	class atn_state
+	class atn_state abstract
 	{
 	public:
 		enum class atn_state_type
