@@ -126,6 +126,9 @@
     <ClInclude Include="antlr\test\test_interval_set.hpp">
       <Filter>Header Files\test</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\test\test_visitor_inheritance.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -165,6 +168,9 @@
       <Filter>Source Files\runtime\atn</Filter>
     </ClCompile>
     <ClCompile Include="antlr\test\test_interval_set.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\test\test_visitor_inheritance.cpp">
       <Filter>Source Files\test</Filter>
     </ClCompile>
   </ItemGroup>
