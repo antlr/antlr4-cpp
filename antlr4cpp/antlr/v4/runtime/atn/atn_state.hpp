@@ -55,14 +55,14 @@ namespace atn {
 		}
 
 	public:
-		size_t state_number() const
-		{
-			return _state_number;
-		}
-
 		atn_state_type state_type() const
 		{
 			return _state_type;
+		}
+
+		size_t state_number() const
+		{
+			return _state_number;
 		}
 
 		size_t rule_index() const
@@ -369,6 +369,16 @@ namespace atn {
 			, _precedence_rule(false)
 			, _left_factored(false)
 		{
+		}
+
+		std::shared_ptr<rule_stop_state> const& stop_state() const
+		{
+			return _stop_state;
+		}
+
+		void stop_state(std::shared_ptr<rule_stop_state> const& value)
+		{
+			_stop_state = value;
 		}
 
 		bool precedence_rule() const
