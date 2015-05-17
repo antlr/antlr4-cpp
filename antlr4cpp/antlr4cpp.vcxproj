@@ -93,6 +93,7 @@
     <ClInclude Include="antlr\v4\runtime\atn\prediction_context_cache.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\semantic_context.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\transition.hpp" />
+    <ClInclude Include="antlr\v4\runtime\dfa\accept_state_information.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\interval_set.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\murmur_hash.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\param_type.hpp" />
