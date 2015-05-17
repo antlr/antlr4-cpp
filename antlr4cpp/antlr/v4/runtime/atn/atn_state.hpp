@@ -253,7 +253,7 @@ namespace atn {
 	private:
 		std::shared_ptr<plus_loopback_state> _loopback_state;
 
-	protected:
+	public:
 		plus_block_start_state(size_t state_number, size_t rule_index)
 			: block_start_state(atn_state_type::plus_block_start, state_number, rule_index)
 		{
