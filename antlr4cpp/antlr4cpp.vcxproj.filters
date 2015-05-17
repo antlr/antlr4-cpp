@@ -66,6 +66,9 @@
     <ClInclude Include="antlr\test\test_graph_nodes.hpp">
       <Filter>Header Files\test</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\conflict_information.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
     <ClInclude Include="antlr\v4\runtime\atn\atn_state.hpp">
       <Filter>Header Files\runtime\atn</Filter>
     </ClInclude>
@@ -181,6 +184,9 @@
     </ClCompile>
     <ClCompile Include="antlr\test\test_visitor_inheritance.cpp">
       <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\conflict_information.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

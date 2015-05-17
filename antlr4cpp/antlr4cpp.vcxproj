@@ -87,6 +87,7 @@
     <ClInclude Include="antlr\v4\runtime\atn\atn_deserialization_options.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\atn_state.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\atn_type.hpp" />
+    <ClInclude Include="antlr\v4\runtime\atn\conflict_information.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\lexer_action.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\lexer_action_executor.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\prediction_context.hpp" />
@@ -118,6 +119,7 @@
     <ClCompile Include="antlr\test\test_interval_set.cpp" />
     <ClCompile Include="antlr\test\test_visitor_inheritance.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\atn_state.cpp" />
+    <ClCompile Include="antlr\v4\runtime\atn\conflict_information.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\lexer_action.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\lexer_action_executor.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\prediction_context.cpp" />
