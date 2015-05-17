@@ -120,6 +120,9 @@
     <ClInclude Include="antlr\v4\runtime\dfa\accept_state_information.hpp">
       <Filter>Header Files\runtime\dfa</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\misc\uuid.hpp">
+      <Filter>Header Files\runtime\misc</Filter>
+    </ClInclude>
     <ClInclude Include="antlr\v4\runtime\token.hpp">
       <Filter>Header Files\runtime</Filter>
     </ClInclude>
