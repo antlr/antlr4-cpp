@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="antlr\test\test_graph_nodes.hpp" />
+    <ClInclude Include="antlr\test\test_interval_set.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\atn_deserialization_options.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\atn_state.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\atn_type.hpp" />
@@ -91,13 +92,16 @@
     <ClInclude Include="antlr\v4\runtime\atn\prediction_context_cache.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\semantic_context.hpp" />
     <ClInclude Include="antlr\v4\runtime\atn\transition.hpp" />
+    <ClInclude Include="antlr\v4\runtime\misc\interval_set.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\murmur_hash.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\param_type.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\ptr_equal_to.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\ptr_hash.hpp" />
+    <ClInclude Include="antlr\v4\runtime\misc\to_string.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\unordered_ptr_map.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\unordered_ptr_set.hpp" />
     <ClInclude Include="antlr\v4\runtime\misc\visitor.hpp" />
+    <ClInclude Include="antlr\v4\runtime\token.hpp" />
     <ClInclude Include="antlr\v4\runtime\tree\parse_tree.hpp" />
     <ClInclude Include="antlr\v4\runtime\tree\parse_tree_listener.hpp" />
     <ClInclude Include="antlr\v4\runtime\tree\parse_tree_visitor.hpp" />
@@ -108,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="antlr4cpp.cpp" />
     <ClCompile Include="antlr\test\test_graph_nodes.cpp" />
+    <ClCompile Include="antlr\test\test_interval_set.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\atn_state.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\lexer_action.cpp" />
     <ClCompile Include="antlr\v4\runtime\atn\lexer_action_executor.cpp" />

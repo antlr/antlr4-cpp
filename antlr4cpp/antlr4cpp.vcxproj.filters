@@ -114,6 +114,18 @@
     <ClInclude Include="antlr\v4\runtime\atn\atn_type.hpp">
       <Filter>Header Files\runtime\atn</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\token.hpp">
+      <Filter>Header Files\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\misc\interval_set.hpp">
+      <Filter>Header Files\runtime\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\misc\to_string.hpp">
+      <Filter>Header Files\runtime\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\test\test_interval_set.hpp">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -151,6 +163,9 @@
     </ClCompile>
     <ClCompile Include="antlr\v4\runtime\atn\transition.cpp">
       <Filter>Source Files\runtime\atn</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\test\test_interval_set.cpp">
+      <Filter>Source Files\test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
