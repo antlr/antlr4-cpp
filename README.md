@@ -6,6 +6,13 @@ This ANTLR 4 target is a very early work-in-progress, originally created for use
 with new features in C++ 11 and 14. The development process has not yet been determined, but we welcome input from the
 community at any time.
 
+## Build status
+
+| OS | Compiler | Configuration | Status |
+| --- | --- | --- | --- |
+| Linux | Clang | None (disabled) | [![Build Status](https://travis-ci.org/antlr/antlr4-cpp.svg?branch=master)](https://travis-ci.org/antlr/antlr4-cpp) |
+| Windows | Visual Studio 2015 | Debug x86 | [![Build status](https://ci.appveyor.com/api/projects/status/evg0gcv76e8w50b3/branch/master?svg=true)](https://ci.appveyor.com/project/sharwell/antlr4-cpp/branch/master) |
+
 ## License
 
 This project is licensed under the 3-clause BSD license. See [LICENSE][] for details.
