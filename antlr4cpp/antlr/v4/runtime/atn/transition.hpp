@@ -4,6 +4,8 @@
 #include <memory>
 #include "semantic_context.hpp"
 
+#include "../misc/interval_set.hpp"
+
 namespace antlr4 {
 namespace atn {
 
@@ -28,7 +30,7 @@ namespace atn {
 
 	private:
 		const transition_type _type;
-		const std::shared_ptr<atn_state> _target;
+		std::shared_ptr<atn_state> _target;
 
 	public:
 		transition(transition_type type, std::shared_ptr<atn_state> target)
@@ -46,6 +48,11 @@ namespace atn {
 		std::shared_ptr<atn_state> const& target() const
 		{
 			return _target;
+		}
+
+		void target(std::shared_ptr<atn_state> const& value)
+		{
+			_target = value;
 		}
 
 		bool epsilon() const
@@ -78,7 +85,7 @@ namespace atn {
 		const int32_t _outermost_precedence_return;
 
 	public:
-		explicit epsilon_transition(std::shared_ptr<atn_state> const& target, int32_t outermost_precedence_return)
+		explicit epsilon_transition(std::shared_ptr<atn_state> const& target, int32_t outermost_precedence_return = -1)
 			: transition(transition_type::epsilon, target)
 			, _outermost_precedence_return(outermost_precedence_return)
 		{
@@ -254,27 +261,35 @@ namespace atn {
 
 	class set_transition : public transition
 	{
+	private:
+		misc::interval_set<int32_t> _set;
+
 	public:
-		explicit set_transition(std::shared_ptr<atn_state> const& target)
-			: set_transition(transition_type::epsilon, target)
+		explicit set_transition(std::shared_ptr<atn_state> const& target, misc::interval_set<int32_t> const& set)
+			: set_transition(transition_type::epsilon, target, set)
 		{
 		}
 
 	protected:
-		explicit set_transition(transition_type type, std::shared_ptr<atn_state> const& target)
+		explicit set_transition(transition_type type, std::shared_ptr<atn_state> const& target, misc::interval_set<int32_t> const& set)
 			: transition(type, target)
+			, _set(set)
 		{
-			throw std::runtime_error("not implemented");
+		}
+
+	public:
+		misc::interval_set<int32_t> const& label() const
+		{
+			return _set;
 		}
 	};
 
 	class not_set_transition : public set_transition
 	{
 	public:
-		explicit not_set_transition(std::shared_ptr<atn_state> const& target)
-			: set_transition(transition_type::not_set, target)
+		explicit not_set_transition(std::shared_ptr<atn_state> const& target, misc::interval_set<int32_t> const& set)
+			: set_transition(transition_type::not_set, target, set)
 		{
-			throw std::runtime_error("not implemented");
 		}
 	};
 

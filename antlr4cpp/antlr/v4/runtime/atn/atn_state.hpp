@@ -9,6 +9,7 @@
 namespace antlr4 {
 namespace atn {
 
+	class grammar_atn;
 	class transition;
 
 	class atn_state abstract
@@ -33,6 +34,7 @@ namespace atn {
 
 	private:
 		const atn_state_type _state_type;
+		const std::shared_ptr<grammar_atn> _atn;
 		const size_t _state_number;
 		const size_t _rule_index;
 
@@ -46,8 +48,9 @@ namespace atn {
 		static const size_t invalid_state_number = ~static_cast<size_t>(0);
 
 	protected:
-		atn_state(atn_state_type state_type, size_t state_number, size_t rule_index)
+		atn_state(atn_state_type state_type, std::shared_ptr<grammar_atn> const& atn, size_t state_number, size_t rule_index)
 			: _state_type(state_type)
+			, _atn(atn)
 			, _state_number(state_number)
 			, _rule_index(rule_index)
 			, _epsilon_only_transitions()
@@ -55,6 +58,11 @@ namespace atn {
 		}
 
 	public:
+		std::shared_ptr<grammar_atn> const& atn() const
+		{
+			return _atn;
+		}
+
 		atn_state_type state_type() const
 		{
 			return _state_type;
@@ -139,8 +147,8 @@ namespace atn {
 	class basic_state final : public atn_state
 	{
 	public:
-		basic_state(size_t state_number, size_t rule_index)
-			: atn_state(atn_state_type::basic, state_number, rule_index)
+		basic_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: atn_state(atn_state_type::basic, atn, state_number, rule_index)
 		{
 		}
 	};
@@ -151,8 +159,8 @@ namespace atn {
 		std::shared_ptr<block_start_state> _start_state;
 
 	public:
-		block_end_state(size_t state_number, size_t rule_index)
-			: atn_state(atn_state_type::block_end, state_number, rule_index)
+		block_end_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: atn_state(atn_state_type::block_end, atn, state_number, rule_index)
 		{
 		}
 
@@ -176,8 +184,8 @@ namespace atn {
 		bool _sll;
 
 	protected:
-		decision_state(atn_state_type state_type, size_t state_number, size_t rule_index)
-			: atn_state(state_type, state_number, rule_index)
+		decision_state(atn_state_type state_type, std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: atn_state(state_type, atn, state_number, rule_index)
 			, _decision(~static_cast<size_t>(0))
 			, _greedy(true)
 			, _sll(false)
@@ -222,8 +230,8 @@ namespace atn {
 		std::shared_ptr<block_end_state> _end_state;
 
 	protected:
-		block_start_state(atn_state_type state_type, size_t state_number, size_t rule_index)
-			: decision_state(state_type, state_number, rule_index)
+		block_start_state(atn_state_type state_type, std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: decision_state(state_type, atn, state_number, rule_index)
 		{
 		}
 
@@ -242,8 +250,8 @@ namespace atn {
 	class basic_block_start_state final : public block_start_state
 	{
 	public:
-		basic_block_start_state(size_t state_number, size_t rule_index)
-			: block_start_state(atn_state_type::block_start, state_number, rule_index)
+		basic_block_start_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: block_start_state(atn_state_type::block_start, atn, state_number, rule_index)
 		{
 		}
 	};
@@ -254,8 +262,8 @@ namespace atn {
 		std::shared_ptr<plus_loopback_state> _loopback_state;
 
 	public:
-		plus_block_start_state(size_t state_number, size_t rule_index)
-			: block_start_state(atn_state_type::plus_block_start, state_number, rule_index)
+		plus_block_start_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: block_start_state(atn_state_type::plus_block_start, atn, state_number, rule_index)
 		{
 		}
 
@@ -274,8 +282,8 @@ namespace atn {
 	class star_block_start_state final : public block_start_state
 	{
 	public:
-		star_block_start_state(size_t state_number, size_t rule_index)
-			: block_start_state(atn_state_type::star_block_start, state_number, rule_index)
+		star_block_start_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: block_start_state(atn_state_type::star_block_start, atn, state_number, rule_index)
 		{
 		}
 	};
@@ -283,8 +291,8 @@ namespace atn {
 	class plus_loopback_state final : public decision_state
 	{
 	public:
-		plus_loopback_state(size_t state_number, size_t rule_index)
-			: decision_state(atn_state_type::plus_loop_back, state_number, rule_index)
+		plus_loopback_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: decision_state(atn_state_type::plus_loop_back, atn, state_number, rule_index)
 		{
 		}
 	};
@@ -296,8 +304,8 @@ namespace atn {
 		bool _precedence_rule_decision;
 
 	public:
-		star_loop_entry_state(size_t state_number, size_t rule_index)
-			: decision_state(atn_state_type::star_loop_entry, state_number, rule_index)
+		star_loop_entry_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: decision_state(atn_state_type::star_loop_entry, atn, state_number, rule_index)
 			, _precedence_rule_decision()
 		{
 		}
@@ -327,8 +335,8 @@ namespace atn {
 	class tokens_start_state final : public decision_state
 	{
 	public:
-		tokens_start_state(size_t state_number, size_t rule_index)
-			: decision_state(atn_state_type::token_start, state_number, rule_index)
+		tokens_start_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: decision_state(atn_state_type::token_start, atn, state_number, rule_index)
 		{
 		}
 	};
@@ -339,8 +347,8 @@ namespace atn {
 		std::shared_ptr<atn_state> _loopback_state;
 
 	public:
-		loop_end_state(size_t state_number, size_t rule_index)
-			: atn_state(atn_state_type::loop_end, state_number, rule_index)
+		loop_end_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: atn_state(atn_state_type::loop_end, atn, state_number, rule_index)
 		{
 		}
 
@@ -364,8 +372,8 @@ namespace atn {
 		bool _left_factored;
 
 	public:
-		rule_start_state(size_t state_number, size_t rule_index)
-			: atn_state(atn_state_type::rule_start, state_number, rule_index)
+		rule_start_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: atn_state(atn_state_type::rule_start, atn, state_number, rule_index)
 			, _precedence_rule(false)
 			, _left_factored(false)
 		{
@@ -405,8 +413,8 @@ namespace atn {
 	class rule_stop_state final : public atn_state
 	{
 	public:
-		rule_stop_state(size_t state_number, size_t rule_index)
-			: atn_state(atn_state_type::rule_stop, state_number, rule_index)
+		rule_stop_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: atn_state(atn_state_type::rule_stop, atn, state_number, rule_index)
 		{
 		}
 	};
@@ -414,8 +422,8 @@ namespace atn {
 	class star_loopback_state final : public atn_state
 	{
 	public:
-		star_loopback_state(size_t state_number, size_t rule_index)
-			: atn_state(atn_state_type::star_loop_back, state_number, rule_index)
+		star_loopback_state(std::shared_ptr<atn::grammar_atn> const& atn, size_t state_number, size_t rule_index)
+			: atn_state(atn_state_type::star_loop_back, atn, state_number, rule_index)
 		{
 		}
 
