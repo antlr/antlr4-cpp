@@ -4,7 +4,6 @@
 #include <cstdint>
 
 namespace antlr4 {
-namespace runtime {
 
 	class token
 	{
@@ -13,5 +12,4 @@ namespace runtime {
 		static const int32_t eof = -1;
 	};
 
-}
 }

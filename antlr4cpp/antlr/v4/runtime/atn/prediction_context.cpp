@@ -16,7 +16,6 @@
 #endif
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	namespace {
@@ -468,6 +467,5 @@ namespace atn {
 		return context_equal(x, y);
 	}
 
-}
 }
 }

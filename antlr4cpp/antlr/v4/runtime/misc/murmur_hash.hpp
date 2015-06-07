@@ -5,7 +5,6 @@
 #include <functional>
 
 namespace antlr4 {
-namespace runtime {
 namespace misc {
 
 	struct murmur_hash
@@ -69,6 +68,5 @@ namespace misc {
 		}
 	};
 
-}
 }
 }

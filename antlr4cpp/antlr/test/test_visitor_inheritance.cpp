@@ -16,9 +16,9 @@
 namespace antlr {
 namespace test {
 
-	using namespace antlr4::runtime;
-	using namespace antlr4::runtime::misc;
-	using namespace antlr4::runtime::tree;
+	using namespace antlr4;
+	using namespace antlr4::misc;
+	using namespace antlr4::tree;
 
 	namespace {
 

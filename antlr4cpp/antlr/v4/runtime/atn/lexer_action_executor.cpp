@@ -11,10 +11,9 @@
 #include <antlr/v4/runtime/misc/ptr_hash.hpp>
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
-	using namespace antlr4::runtime::misc;
+	using namespace antlr4::misc;
 
 	namespace {
 
@@ -95,6 +94,5 @@ namespace atn {
 		return std::equal(x.actions().begin(), x.actions().end(), y.actions().begin(), misc::ptr_equal_to<std::shared_ptr<lexer_action>>());
 	}
 
-}
 }
 }

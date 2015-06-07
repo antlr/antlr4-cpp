@@ -5,7 +5,6 @@
 #include "semantic_context.hpp"
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	class atn_state;
@@ -312,6 +311,5 @@ namespace atn {
 		}
 	};
 
-}
 }
 }

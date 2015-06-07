@@ -7,7 +7,6 @@
 #include <vector>
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	class transition;
@@ -426,14 +425,13 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
 	template<>
-	class hash<antlr4::runtime::atn::atn_state>
+	class hash<antlr4::atn::atn_state>
 	{
-		size_t operator() (antlr4::runtime::atn::atn_state const& state) const
+		size_t operator() (antlr4::atn::atn_state const& state) const
 		{
 			return state.state_number();
 		}

@@ -14,7 +14,6 @@
 #endif
 
 namespace antlr4 {
-namespace runtime {
 namespace tree {
 
 	namespace {
@@ -86,6 +85,5 @@ namespace tree {
 		listener.exit_node(tree);
 	}
 
-}
 }
 }

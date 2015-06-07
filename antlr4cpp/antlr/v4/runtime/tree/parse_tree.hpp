@@ -6,7 +6,6 @@
 #include "../misc/visitor.hpp"
 
 namespace antlr4 {
-namespace runtime {
 
 	class token;
 
@@ -145,7 +144,7 @@ namespace tree {
 	class error_node : public terminal_node
 	{
 	public:
-		error_node(std::shared_ptr<runtime::token> const& token, std::shared_ptr<rule_node> const& parent)
+		error_node(std::shared_ptr<antlr4::token> const& token, std::shared_ptr<rule_node> const& parent)
 			: terminal_node(token, parent)
 		{
 		}
@@ -160,6 +159,5 @@ namespace tree {
 		virtual void accept(parse_tree_visitor& visitor) const override;
 	};
 
-}
 }
 }

@@ -5,7 +5,6 @@
 #include <vector>
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	class semantic_context
@@ -135,14 +134,13 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
 	template<>
-	struct hash<antlr4::runtime::atn::semantic_context>
+	struct hash<antlr4::atn::semantic_context>
 	{
-		size_t operator() (antlr4::runtime::atn::semantic_context const& x) const;
+		size_t operator() (antlr4::atn::semantic_context const& x) const;
 	};
 
 }

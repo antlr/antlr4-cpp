@@ -5,7 +5,6 @@
 #include <functional>
 
 namespace antlr4 {
-namespace runtime {
 namespace misc {
 
 	class uuid
@@ -103,13 +102,12 @@ namespace misc {
 
 }
 }
-}
 
 namespace std {
 	template<>
-	struct hash<antlr4::runtime::misc::uuid>
+	struct hash<antlr4::misc::uuid>
 	{
-		size_t operator() (antlr4::runtime::misc::uuid const& value) const
+		size_t operator() (antlr4::misc::uuid const& value) const
 		{
 			auto result = value._a
 				^ ((static_cast<int32_t>(value._b) << 16) | static_cast<int32_t>(static_cast<uint16_t>(value._c)))

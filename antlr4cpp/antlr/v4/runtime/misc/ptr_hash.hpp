@@ -4,7 +4,6 @@
 #include <functional>
 
 namespace antlr4 {
-namespace runtime {
 namespace misc {
 
 	template<typename _Tptr, typename _Hasher = std::hash<std::remove_reference<decltype(*_Tptr())>::type>>
@@ -23,6 +22,5 @@ namespace misc {
 		}
 	};
 
-}
 }
 }

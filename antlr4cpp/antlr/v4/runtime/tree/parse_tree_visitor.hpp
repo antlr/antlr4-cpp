@@ -5,7 +5,6 @@
 #include "../misc/visitor.hpp"
 
 namespace antlr4 {
-namespace runtime {
 namespace tree {
 
 	class error_node;
@@ -57,7 +56,6 @@ namespace tree {
 		virtual bool should_visit_next_child(rule_node const& node, result_param_type current_result);
 	};
 
-}
 }
 }
 

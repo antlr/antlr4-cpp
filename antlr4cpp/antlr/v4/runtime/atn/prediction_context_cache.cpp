@@ -7,7 +7,6 @@
 #include <antlr/v4/runtime/atn/prediction_context_cache.hpp>
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	namespace {
@@ -51,17 +50,16 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
 	template<>
-	struct hash<antlr4::runtime::atn::prediction_context_and_int>
+	struct hash<antlr4::atn::prediction_context_and_int>
 	{
-		size_t operator() (antlr4::runtime::atn::prediction_context_and_int const& value) const
+		size_t operator() (antlr4::atn::prediction_context_and_int const& value) const
 		{
 			size_t hash = 5;
-			hash = 7 * hash + (value.context ? std::hash<antlr4::runtime::atn::prediction_context>()(*value.context) : 0);
+			hash = 7 * hash + (value.context ? std::hash<antlr4::atn::prediction_context>()(*value.context) : 0);
 			hash = 7 * hash + value.value;
 			return hash;
 		}
@@ -70,7 +68,6 @@ namespace std {
 }
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	class prediction_context_cache::data
@@ -156,6 +153,5 @@ namespace atn {
 		return result->second;
 	}
 
-}
 }
 }

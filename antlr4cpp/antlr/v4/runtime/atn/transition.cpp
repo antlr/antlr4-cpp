@@ -12,7 +12,6 @@
 #endif
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	bool transition::matches(int32_t symbol, int32_t min_vocab, int32_t max_vocab) const
@@ -60,6 +59,5 @@ namespace atn {
 		}
 	}
 
-}
 }
 }

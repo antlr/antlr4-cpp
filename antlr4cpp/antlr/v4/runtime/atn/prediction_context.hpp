@@ -7,7 +7,6 @@
 #include <vector>
 
 namespace antlr4 {
-namespace runtime {
 
 	class rule_context;
 
@@ -90,12 +89,11 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 	template<>
-	struct hash<antlr4::runtime::atn::prediction_context> {
-		size_t operator()(antlr4::runtime::atn::prediction_context const& prediction_context) const
+	struct hash<antlr4::atn::prediction_context> {
+		size_t operator()(antlr4::atn::prediction_context const& prediction_context) const
 		{
 			return static_cast<size_t>(prediction_context.cached_hash_code);
 		}

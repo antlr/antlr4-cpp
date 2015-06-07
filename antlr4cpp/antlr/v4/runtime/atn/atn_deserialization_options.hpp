@@ -2,7 +2,6 @@
 #pragma once
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	class atn_deserialization_options
@@ -58,6 +57,5 @@ namespace atn {
 		}
 	};
 
-}
 }
 }

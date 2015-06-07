@@ -4,7 +4,6 @@
 #include <memory>
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	class prediction_context;
@@ -62,14 +61,13 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
 	template<>
-	struct hash<antlr4::runtime::atn::prediction_context_cache::identity_commutative_prediction_context_operands>
+	struct hash<antlr4::atn::prediction_context_cache::identity_commutative_prediction_context_operands>
 	{
-		inline size_t operator()(antlr4::runtime::atn::prediction_context_cache::identity_commutative_prediction_context_operands const& x) const;
+		inline size_t operator()(antlr4::atn::prediction_context_cache::identity_commutative_prediction_context_operands const& x) const;
 	};
 
 }
