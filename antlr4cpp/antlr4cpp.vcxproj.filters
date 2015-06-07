@@ -43,6 +43,9 @@
     <Filter Include="Header Files\runtime\dfa">
       <UniqueIdentifier>{198d6a76-8266-4484-91ba-3d51a16ed6eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\runtime\dfa">
+      <UniqueIdentifier>{09d206a3-d8d2-4737-90a9-11d06d05891b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -141,6 +144,18 @@
     <ClInclude Include="antlr\test\test_visitor_inheritance.hpp">
       <Filter>Header Files\test</Filter>
     </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\atn_deserializer.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\atn\grammar_atn.hpp">
+      <Filter>Header Files\runtime\atn</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\dfa\dfa_state.hpp">
+      <Filter>Header Files\runtime\dfa</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\v4\runtime\dfa\dynamic_dfa.hpp">
+      <Filter>Header Files\runtime\dfa</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -187,6 +202,15 @@
     </ClCompile>
     <ClCompile Include="antlr\v4\runtime\atn\conflict_information.cpp">
       <Filter>Source Files\runtime\atn</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\atn_deserializer.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\atn\grammar_atn.cpp">
+      <Filter>Source Files\runtime\atn</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\v4\runtime\dfa\dynamic_dfa.cpp">
+      <Filter>Source Files\runtime\dfa</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
