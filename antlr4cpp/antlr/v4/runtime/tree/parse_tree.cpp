@@ -5,7 +5,6 @@
 #include "parse_tree_visitor.hpp"
 
 namespace antlr4 {
-namespace runtime {
 namespace tree {
 
 	std::wstring rule_node::text() const
@@ -33,6 +32,5 @@ namespace tree {
 		visitor.visit(*this);
 	}
 
-}
 }
 }

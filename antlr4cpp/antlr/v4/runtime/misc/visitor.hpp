@@ -2,7 +2,6 @@
 #pragma once
 
 namespace antlr4 {
-namespace runtime {
 namespace misc {
 
 	template<typename... _Types>
@@ -36,6 +35,5 @@ namespace misc {
 		virtual void accept(visitor<_Types...>& visitor) const = 0;
 	};
 
-}
 }
 }

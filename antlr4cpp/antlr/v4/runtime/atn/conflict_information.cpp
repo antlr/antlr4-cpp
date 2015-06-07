@@ -4,7 +4,6 @@
 #include <antlr/v4/runtime/atn/conflict_information.hpp>
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	bool operator== (conflict_information const& /*x*/, conflict_information const& /*y*/)
@@ -14,11 +13,10 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
-	using namespace antlr4::runtime::atn;
+	using namespace antlr4::atn;
 
 	inline bool hash<conflict_information>::operator()(conflict_information const& /*x*/) const
 	{

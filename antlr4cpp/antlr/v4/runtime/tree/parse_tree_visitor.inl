@@ -4,7 +4,6 @@
 #include "parse_tree_visitor.hpp"
 
 namespace antlr4 {
-namespace runtime {
 namespace tree {
 
 	template<typename _TResult>
@@ -63,6 +62,5 @@ namespace tree {
 		return true;
 	}
 
-}
 }
 }

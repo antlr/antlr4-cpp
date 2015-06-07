@@ -6,7 +6,6 @@
 #include <antlr/v4/runtime/atn/lexer_action.hpp>
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	namespace {
@@ -80,11 +79,10 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
-	using namespace antlr4::runtime::atn;
+	using namespace antlr4::atn;
 
 	size_t hash<lexer_action>::operator() (lexer_action const& /*action*/) const
 	{

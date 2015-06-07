@@ -2,7 +2,6 @@
 #pragma once
 
 namespace antlr4 {
-namespace runtime {
 namespace tree {
 
 	class error_node;
@@ -39,6 +38,5 @@ namespace tree {
 		virtual void exit_rule(parse_tree_listener& listener, rule_node const& tree);
 	};
 
-}
 }
 }

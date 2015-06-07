@@ -4,7 +4,6 @@
 #include <memory>
 
 namespace antlr4 {
-namespace runtime {
 
 	namespace atn {
 		class lexer_action_executor;
@@ -43,6 +42,5 @@ namespace dfa {
 		}
 	};
 
-}
 }
 }

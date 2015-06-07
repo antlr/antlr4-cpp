@@ -2,7 +2,6 @@
 #pragma once
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	// Represents the type of recognizer an ATN applies to.
@@ -15,6 +14,5 @@ namespace atn {
 		parser,
 	};
 
-}
 }
 }

@@ -5,7 +5,6 @@
 #include "param_type.hpp"
 
 namespace antlr4 {
-namespace runtime {
 namespace misc {
 
 	template<typename _Tptr>
@@ -28,6 +27,5 @@ namespace misc {
 		}
 	};
 
-}
 }
 }

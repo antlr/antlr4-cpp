@@ -5,7 +5,6 @@
 #include <vector>
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	class lexer_action;
@@ -37,14 +36,13 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
 	template<>
-	struct hash<antlr4::runtime::atn::lexer_action_executor>
+	struct hash<antlr4::atn::lexer_action_executor>
 	{
-		size_t operator() (antlr4::runtime::atn::lexer_action_executor const& executor) const
+		size_t operator() (antlr4::atn::lexer_action_executor const& executor) const
 		{
 			return executor._hash_code;
 		}

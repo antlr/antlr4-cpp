@@ -19,7 +19,7 @@
 namespace antlr {
 namespace test {
 
-	using namespace antlr4::runtime::atn;
+	using namespace antlr4::atn;
 
 	namespace {
 

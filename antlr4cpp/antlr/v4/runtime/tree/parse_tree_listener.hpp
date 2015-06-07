@@ -2,7 +2,6 @@
 #pragma once
 
 namespace antlr4 {
-namespace runtime {
 namespace tree {
 
 	class error_node;
@@ -22,6 +21,5 @@ namespace tree {
 		virtual void visit(error_node const& node) = 0;
 	};
 
-}
 }
 }

@@ -4,7 +4,6 @@
 #include <vector>
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	class conflict_information
@@ -41,14 +40,13 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
 	template<>
-	struct hash<antlr4::runtime::atn::conflict_information>
+	struct hash<antlr4::atn::conflict_information>
 	{
-		bool operator() (antlr4::runtime::atn::conflict_information const& x) const;
+		bool operator() (antlr4::atn::conflict_information const& x) const;
 	};
 
 }

@@ -18,10 +18,9 @@
 #endif
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
-	using namespace antlr4::runtime::misc;
+	using namespace antlr4::misc;
 
 	namespace {
 
@@ -232,12 +231,11 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
-	using namespace antlr4::runtime::atn;
-	using namespace antlr4::runtime::misc;
+	using namespace antlr4::atn;
+	using namespace antlr4::misc;
 
 	size_t hash<semantic_context>::operator() (semantic_context const& x) const
 	{

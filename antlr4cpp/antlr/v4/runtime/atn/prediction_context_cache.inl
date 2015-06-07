@@ -3,7 +3,6 @@
 #include "prediction_context.hpp"
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	inline bool operator== (prediction_context_cache::identity_commutative_prediction_context_operands const& x, prediction_context_cache::identity_commutative_prediction_context_operands const& y)
@@ -17,13 +16,12 @@ namespace atn {
 
 }
 }
-}
 
 namespace std {
 
-	inline size_t std::hash<antlr4::runtime::atn::prediction_context_cache::identity_commutative_prediction_context_operands>::operator() (antlr4::runtime::atn::prediction_context_cache::identity_commutative_prediction_context_operands const& x) const
+	inline size_t std::hash<antlr4::atn::prediction_context_cache::identity_commutative_prediction_context_operands>::operator() (antlr4::atn::prediction_context_cache::identity_commutative_prediction_context_operands const& x) const
 	{
-		std::hash<antlr4::runtime::atn::prediction_context> hasher;
+		std::hash<antlr4::atn::prediction_context> hasher;
 		return hasher(*x.x()) ^ hasher(*x.y());
 	}
 

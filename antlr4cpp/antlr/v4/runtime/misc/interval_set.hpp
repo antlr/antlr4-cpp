@@ -10,7 +10,6 @@
 #include "to_string.hpp"
 
 namespace antlr4 {
-namespace runtime {
 namespace misc {
 
 	template<typename _Ty = int32_t, typename _Alloc = std::allocator<std::pair<_Ty, _Ty>>>
@@ -496,6 +495,5 @@ namespace misc {
 		}
 	};
 
-}
 }
 }

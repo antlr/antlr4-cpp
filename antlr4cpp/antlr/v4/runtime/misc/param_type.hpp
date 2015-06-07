@@ -4,7 +4,6 @@
 #include <functional>
 
 namespace antlr4 {
-namespace runtime {
 namespace misc {
 
 	template<typename _Ty>
@@ -17,6 +16,5 @@ namespace misc {
 		typedef typename std::conditional<pass_by_value, _Ty, _Ty const&>::type type;
 	};
 
-}
 }
 }

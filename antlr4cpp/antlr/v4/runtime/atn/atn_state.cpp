@@ -13,7 +13,6 @@
 #endif
 
 namespace antlr4 {
-namespace runtime {
 namespace atn {
 
 	void atn_state::add_transition(std::shared_ptr<atn::transition> const& transition)
@@ -73,6 +72,5 @@ namespace atn {
 		return std::static_pointer_cast<star_loop_entry_state>(transition(0)->target());
 	}
 
-}
 }
 }
