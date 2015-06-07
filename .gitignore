@@ -1,10 +1,11 @@
 # Temporary and per-user files created by Visual Studio
 *.opensdf
 *.sdf
-*.sln.ide/
 *.suo
 *.vcxproj.user
 ipch/
+.vs/
 
 # Build output
 Debug/
+Release/
